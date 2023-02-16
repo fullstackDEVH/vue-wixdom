@@ -9,9 +9,7 @@
           <div class="create-community__wrapper">
             <div>
               <div class="create-community__content">
-                <h2 class="create-community__heading">
-                  Create a new community
-                </h2>
+                <h2 class="create-community__heading">Create a new project</h2>
                 <div class="create-community__step">
                   <TheStep />
                 </div>
@@ -21,7 +19,6 @@
                     :currentStep="currentStep"
                     @onClickNextButton="handleNextStep()"
                     @onClickPrevButton="handlePrevStep()"
-                    @onClickSkipButton="handleSkipStep()"
                   />
                 </div>
               </div>
@@ -54,15 +51,13 @@ export default {
   methods: {
     handleNextStep() {
       if (this.currentStep === 3) {
-        this.$router.push({ path: "/cms" });
+        // this.$router.push({ path: "/cms" });
+      } else {
+        this.currentStep++;
       }
-      this.currentStep++;
     },
     handlePrevStep() {
       this.currentStep--;
-    },
-    handleSkipStep() {
-      this.$router.push({ path: "/cms" });
     },
   },
 };

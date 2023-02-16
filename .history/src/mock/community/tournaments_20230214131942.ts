@@ -1,0 +1,3 @@
+interface ITournament {
+  name: string;
+}

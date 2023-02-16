@@ -1,0 +1,1 @@
+const TAGS: Array<string> = [];
