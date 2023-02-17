@@ -1,9 +1,9 @@
 <template>
   <div class="home-view-checker">
-    <h1 class="home-view-cheker-title">Home View Checker</h1>
+    <h1 class="home-view-cheker-title">404 NOT FOUND</h1>
   </div>
 </template>
-
+  
 <script lang="ts">
 export default {};
 </script>
