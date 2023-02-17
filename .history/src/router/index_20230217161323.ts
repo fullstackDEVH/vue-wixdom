@@ -7,11 +7,11 @@ const router = createRouter({
 });
 router.beforeEach((to, from, next) => {
   const sourceRoter = to.meta.source;
+  console.log(to);
   if (sourceRoter === "cms") {
     // do something
-    router.push({ path: "/cms/login" });
   } else {
-    router.push({ path: "/cms/login" });
+    console.log("1");
     // const userRole = store.state.role;
     // const requiresAuth = to.matched.some((record) => record.meta.requiresAuth);
     // const allowedRoles: any = to.meta.allowedRoles;
@@ -22,11 +22,11 @@ router.beforeEach((to, from, next) => {
     // } else {
     //   next();
     // }
-    // if (requiresAuth && !userRole) {
-    //   next({ path: "/login" });
-    // } else {
-    //   next();
-    // }
+    if (requiresAuth && !userRole) {
+      next({ path: "/login" });
+    } else {
+      next();
+    }
   }
 });
 export default router;

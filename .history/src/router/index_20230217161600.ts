@@ -11,7 +11,6 @@ router.beforeEach((to, from, next) => {
     // do something
     router.push({ path: "/cms/login" });
   } else {
-    router.push({ path: "/cms/login" });
     // const userRole = store.state.role;
     // const requiresAuth = to.matched.some((record) => record.meta.requiresAuth);
     // const allowedRoles: any = to.meta.allowedRoles;
